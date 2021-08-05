@@ -41,7 +41,7 @@
     }
     .images{
         position: absolute;
-        left: 88%;
+        left: 87.5%;
         text-align: end;
         margin: 15px 14px 35px 24px;
         word-spacing: 40px;
@@ -52,6 +52,26 @@
     }
     .images:hover {
         text-decoration:underline;
+    }
+    .sign-in-button{
+        position: absolute;
+        border-radius: 3px;
+        background-color: #4683f0;
+        top: -1%;
+        left: 92%;
+        width: 50px;
+        height: 10px;
+        border: 1px solid #f3f3f3;
+        padding: 8px 10px 15px 12.7px;
+        margin: 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: Roboto,arial,sans-serif;
+    }
+    .sign-in-button:hover {
+        background-color: #5e93f2;
     }
     .searchbar {
         position: absolute;
@@ -79,7 +99,7 @@
         z-index: 1;
         color:rgba(223, 225, 229);
     }
-    .clear-icon {
+    .mic-icon {
         position: absolute;
         top: 42.5%;
         left: 67.5%;
@@ -87,7 +107,7 @@
         z-index: 1;
         cursor: pointer;
     }
-    .clear-icon:hover {
+    .mic-icon:hover {
         transform: scale(1.2);
     }
     .advertising{
@@ -119,7 +139,7 @@
     .how-search-works {
         position: absolute;
         top: 35%;
-        left: 16.4%;
+        left: 16.2%;
         color: #73787c;
         text-decoration: none;
         font-size: 14px;
@@ -199,11 +219,16 @@
         width: 100px;
         height: 10px;
         border: 1px solid #f3f3f3;
-        padding: 10px 12.7px 15px 12.7px;
+        padding: 10px 12.5px 15px 12.7px;
         margin: 20px;
+        text-decoration: none;
         font-size: 14px;
         font-family: Roboto,arial,sans-serif;
         color: #63676b;
+    }
+    .google-search-button:hover {
+        border: 1px solid #A9A9A9;
+        background-color: #f5f5f5;
     }
     .im-feeling-lucky {
         position: absolute;
@@ -216,11 +241,16 @@
         border: 1px solid #f3f3f3;
         padding: 10px 25px 15px 15px;
         margin: 20px;
+        text-decoration: none;
         font-size: 14px;
         font-family: Roboto,arial,sans-serif;
         color: #63676b;
         white-space: nowrap;
         overflow: hidden;
+    }
+    .im-feeling-lucky:hover {
+        border: 1px solid #A9A9A9;
+        background-color: #f5f5f5;
     }
 </style>
 <html lang="en">
@@ -229,6 +259,7 @@
     <a class="store" href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US"> Store</a>
     <a class="gmaillink" href="https://mail.google.com/mail/&ogbl"> Gmail </a>
     <a class="images" href="https://www.google.com/imghp?hl=en&ogbl"> images</a>
+    <a class="sign-in-button" href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin"> Sign in</a>
 </head>
 <div> 
     <a class="logo" href="https://www.google.com/"> <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"></a>
@@ -237,11 +268,11 @@
     <div>
         <input class="searchbar" type="text"  placeholder="Search Google or type a URL">
         <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
-        <img class="clear-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/1425px-Google_mic.svg.png" />
+        <img class="mic-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/1425px-Google_mic.svg.png" />
     </div> 
     <div>
-        <p class="google-search-button"> Google Search </p>
-        <p class="im-feeling-lucky"> I'm Feeling Lucky </p>
+        <a class="google-search-button" href="https://www.google.com/search?q=google"> Google Search </a>
+        <a class="im-feeling-lucky" href="http://www.google.com/search?q=&btnI=I%27m+Feeling+Lucky"> I'm Feeling Lucky </a>
     </div>
 </body>
 <footer>
@@ -258,3 +289,4 @@
 
 </footer>
 </html>
+<!--- hey -->
